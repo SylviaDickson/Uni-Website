@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale= 1.0">
+	<link rel="icon" href="https://cdn.auckland.ac.nz/designs/global/favicon.png" >
+	<meta charset="UTF-8"> 
+   <title>Computer Science</title>
+   <link rel="stylesheet" type="text/css" href = "CS.css">
+   <script src="CS.js"> 
+   </script>
+   <script>
+	var currentTab = "";
+	window.onload = function(){
+	showHome()
+	}</script>
+</head>
+<body style="width: 100%;">
+   <header>
+      <table style="width: 100%;">
+         <tr>
+            <td id="Home" class="center" onclick="showHome();">Home</td>
+            <td id="Courses" class="center" onclick="getCourses();">Courses</td>
+            <td id="People" class="center" onclick="getPeople();">People</td>
+			<td id="News" class="center" onclick="getNews();">News</td>
+			<td id="Notices" class="center" onclick="getNotices();">Notices</td>
+			<td id="GuestBook" class="center" onclick="caller();">GuestBook</td>
+			</tr>
+      </table>
+      <hr />
+      <hr />
+   </header>
+   
+    <div id="SectionA"><p>"Welcome to New Zealand's leading computer science department. We pride ourselves on the excellence of our staff and our students."</p></div>
+    <div id="SectionB"><h2>Courses</h2><table id="cTab"></table></div>
+    <div id="SectionC"><h2>People</h2><table id="pTab"></table></div>
+    <div id="SectionD"><h2>News</h2><div id="newsdiv"></div></div>
+    <div id="SectionE"><h2>Notices</h2><div id="noticesdiv"></div></div>
+    <div id="SectionF"><h2>Guest Book</h2>Name:<br>
+	<input type="text" id="name">
+	<br>Comment:<br>
+	<textarea id="message" rows="width" cols="width"></textarea>
+	<br><br>
+	<input type="submit" value="Submit" onclick="postcomment()">
+
+	<div id="commentdiv"></div>
+</div>
+</body>
+</html>
